@@ -20,8 +20,8 @@
                {{$guitar->description}}
             </p>
             <p class="text-right">
-              <a href="{{"$guitar->id/edit"}}" class="btn btn-primary">Editar</a>
-              <a href="{{"/guitar/$guitar->id/delete"}}" class="btn btn-danger"> Deletar</a>    
+              <a href="{{route('guitar.get.edit', $guitar->id)}}" class="btn btn-primary">Editar</a>
+              <a href="{{route('guitar.get.delete', $guitar->id)}}" class="btn btn-danger"> Deletar</a>  
             </p>
         </div>
     </div>
@@ -46,9 +46,9 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
           @if(isset($id))
-          <form method="POST" action="{{"/guitar/$id"}}"> 
+          <form method="POST" action="{{route('guitar.delete',$id)}}">  
           @else 
-          <form method="POST" action="{{"/guitar/$guitar->id"}}"> 
+          <form method="POST" action="{{route('guitar.delete',$guitar->id)}}">
           @endif
             @csrf 
             @method('delete')
