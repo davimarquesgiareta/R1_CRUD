@@ -16,11 +16,11 @@ use App\Http\Controllers\GuitarsController;
 |
 */
 
-Route::get('/',[HomeController::class, 'homePage'])->name('home.page');
-Route::get('/guitar/list', [GuitarsController::class, 'getList'])->name('guitar.list');
-Route::get('/guitar/register', [GuitarsController::class, 'getRegister'])->name('guitar.register');
-Route::post('/guitar/register', [GuitarsController::class, 'postRegister'])->name('guitar.sendregister');
-Route::get('/guitar/{guitar}/edit', [GuitarsController::class, 'editList'])->name('guitar.editlist');
-Route::put('/guitar/{guitar}/edit', [GuitarsController::class, 'putEdit'])->name('guitar.sendedit');
-Route::get('/guitar/{guitar}/delete', [GuitarsController::class, 'modalDelete'])->name('guitar.delete');
-Route::delete('/guitar/{guitar}', [GuitarsController::class, 'deleteRegister'])->name('guitar.senddelete');
+Route::get('/',[HomeController::class, 'homePage'])->name('home.get./');
+Route::get('/guitar/list', [GuitarsController::class, 'getList'])->name('guitar.get.list');
+Route::get('/guitar/register', [GuitarsController::class, 'getRegister'])->name('guitar.get.register');
+Route::post('/guitar/register', [GuitarsController::class, 'postRegister'])->name('guitar.post.register');
+Route::get('/guitar/{guitar}/edit', [GuitarsController::class, 'editList'])->name('guitar.get.edit');
+Route::put('/guitar/{guitar}/edit', [GuitarsController::class, 'putEdit'])->name('guitar.put.edit');
+Route::get('/guitar/{guitar}/delete', [GuitarsController::class, 'modalDelete'])->name('guitar.get.delete');
+Route::delete('/guitar/{guitar}', [GuitarsController::class, 'deleteRegister'])->name('guitar.delete');
