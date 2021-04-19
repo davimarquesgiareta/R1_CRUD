@@ -4,11 +4,11 @@
 <!--Conteudo cadastro -->
     @if(isset($guitar))
         <div class="container my-3">
-        <form id="formEditguitar" action="{{url("guitar/$guitar->id/edit")}}" method="POST"  class="row">
+        <form id="formEditguitar" action="{{route('guitar.put.edit',$guitar->id)}}" method="POST"  class="row">
             @method('PUT')
     @else    
         <div class="container my-3">
-        <form id="formCadguitar"  method="POST" action="{{url('guitar/register')}}" class="row">
+        <form id="formCadguitar"  method="POST" action="{{route('guitar.post.register')}}" class="row">
     @endif
         @csrf
         <div class="form-group col-md-6">
