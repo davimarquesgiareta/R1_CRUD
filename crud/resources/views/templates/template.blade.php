@@ -19,13 +19,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="{{route('home.get./')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/guitar/list">Listagem</a>
+                    <a class="nav-link" href="{{route('guitar.get.list')}}">Listagem</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/guitar/register">Cadastro</a>
+                    <a class="nav-link" href="{{route('guitar.get.register')}}">Cadastro</a>
                 </li>
             </div>
         </nav>
